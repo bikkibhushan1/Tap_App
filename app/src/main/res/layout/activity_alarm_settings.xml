@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlarmSettingsActivity"
+    android:background="@drawable/gradient_blue2"
+
+    android:padding="30dp"
+    android:id="@+id/alarm_settings_activity_constraint_layout">
+
+
+    <ImageView
+        android:id="@+id/disable_alarm_btn"
+        android:layout_width="94dp"
+        android:layout_height="103dp"
+        android:clickable="true"
+        android:onClick="disable_alarm"
+        android:src="@drawable/disable_alarm_pic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/set_alarm_limit_text"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/set_alarm_limit_text"
+        app:layout_constraintTop_toBottomOf="@+id/set_alarm_limit_btn"
+        app:layout_constraintVertical_bias="0.342" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="332dp"
+        android:layout_height="279dp"
+        android:src="@drawable/alarm_activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <Button
+        android:id="@+id/set_alarm_limit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:clickable="true"
+        android:onClick="set_alarm_limit"
+        android:text="Set Limit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/set_alarm_limit_text"
+        app:layout_constraintStart_toStartOf="@+id/set_alarm_limit_text"
+        app:layout_constraintTop_toBottomOf="@+id/set_alarm_limit_text"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <EditText
+
+        android:id="@+id/set_alarm_limit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#09C6DF"
+
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Set Alarm Limit ( in mins)"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.095" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
+

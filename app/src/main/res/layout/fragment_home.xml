@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_refresh_home_fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/home_fragment_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Log Details"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/log_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/alarm_floating"
+            android:layout_width="70dp"
+            android:layout_height="57dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+
+
+            android:onClick="open_alarm_settings_activity"
+            android:src="@drawable/alarm"
+            app:backgroundTint="#09C6DF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/log_card"
+            app:layout_constraintVertical_bias="0.963"
+            app:maxImageSize="40dp"
+            app:rippleColor="#000"
+            android:elevation="50dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/log_card"
+            android:layout_width="341dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="68dp"
+            android:clickable="true"
+            android:foreground="@drawable/ripple_effect"
+            app:cardBackgroundColor="#09C6DF"
+            app:cardCornerRadius="30dp"
+            app:contentPadding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/set_water_limit"
+                    android:layout_width="81dp"
+                    android:layout_height="66dp"
+                    android:layout_marginStart="232dp"
+
+                    android:text="500 l"
+                    android:textColor="#f00"
+                    android:textSize="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/set_used"
+                    android:layout_width="78dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="232dp"
+
+                    android:text="50 l"
+                    android:textSize="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/set_available"
+                    android:layout_width="74dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="232dp"
+
+                    android:text="0 l"
+                    android:textSize="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/set_used" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="71dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="16dp"
+
+                    android:text="Used"
+                    android:textSize="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="68dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
+
+                    android:text="Limit"
+                    android:textColor="#f00"
+                    android:textSize="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="128dp"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="16dp"
+
+                    android:text="Available"
+                    android:textSize="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
